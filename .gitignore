@@ -91,3 +91,5 @@ dist
 
 # Compiled code
 lib/
+
+.svelte-kit/
