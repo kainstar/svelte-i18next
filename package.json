@@ -20,8 +20,7 @@
     "clean": "rimraf lib",
     "lint": "eslint src",
     "prepare": "is-ci || husky",
-    "semantic-release": "semantic-release",
-    "test": "vitest run --coverage"
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
