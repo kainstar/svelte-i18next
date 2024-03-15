@@ -3,4 +3,4 @@ addResource: 添加资源
 removeResource: 删除资源
 toggleImg: 切换图片显示
 
-transContent: <custom>自定义</custom>组件<custom-blue><strong>渲染</strong></custom-blue><a href="https://unsplash.com/photos/mountain-range-rnKqWvO80Y4"><img src="https://images.unsplash.com/photo-1542396601-dca920ea2807?q=80&w=1951&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></a>
+transContent: <custom>自定义</custom>组件<custom-blue><strong>渲染</strong></custom-blue><a href="{{- href}}"><img src="https://images.unsplash.com/photo-1542396601-dca920ea2807?q=80&w=1951&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></a>

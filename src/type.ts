@@ -19,7 +19,8 @@ export interface SvelteI18nextOptions {
    */
   bindI18nStore?: string | false;
   /**
-   * Which nodes not to convert in defaultValue generation in the Trans component.
+   * Which tag will be treated as native HTML tag Trans component.
+   * If a tag is not custom component and native HTML tag, it will be render as string.
    * `true` will keep all tags
    * @default true
    */

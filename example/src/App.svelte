@@ -1,8 +1,9 @@
 <script lang="ts">
   import { getTranslation, setI18nContext, Trans } from '../../src';
   import i18nInstance from './i18n';
-  import Img from './Img.svelte';
-  import Custom from './Custom.svelte';
+  import Img from './components/Img.svelte';
+  import Custom from './components/Custom.svelte';
+  import Child from './Child.svelte';
 
   setI18nContext(i18nInstance);
 
@@ -17,11 +18,6 @@
   const addResource = () => {
     $i18n.addResources('en-US', 'runtime', { filled: 'Filled' });
     $i18n.addResources('zh-CN', 'runtime', { filled: '已填充' });
-  };
-
-  const removeResource = () => {
-    $i18n.removeResourceBundle('en-US', 'runtime');
-    $i18n.removeResourceBundle('zh-CN', 'runtime');
   };
 </script>
 
@@ -40,20 +36,14 @@
     </button>
   </div>
 
-  {#if $i18n.exists('filled', { ns: 'runtime' })}
-    <p>
-      {$t('filled', {
-        ns: 'runtime',
-      })}
-    </p>
-    <button on:click={removeResource}>
-      {$t('index.removeResource')}
-    </button>
-  {/if}
+  <Child />
 
   <div>
     <Trans
       i18nKey="index.transContent"
+      tOptions={{
+        href: 'https://unsplash.com/photos/mountain-range-rnKqWvO80Y4',
+      }}
       components={{
         custom: Custom,
         'custom-blue': [Custom, { color: 'blue' }],

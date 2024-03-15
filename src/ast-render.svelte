@@ -23,13 +23,13 @@
   {@const [comp, props] = $components[node.name] ?? []}
   {#if comp}
     {#if typeof comp === 'function'}
-      <svelte:component this={comp} {...node.attrs} {...props}>
+      <svelte:component this={comp} {...props} {...node.attrs}>
         {#each node.children as child}
           <svelte:self node={child} />
         {/each}
       </svelte:component>
     {:else if typeof comp === 'string'}
-      <svelte:element this={comp} {...node.attrs} {...props}>
+      <svelte:element this={comp} {...props} {...node.attrs}>
         {#each node.children as child}
           <svelte:self node={child} />
         {/each}
