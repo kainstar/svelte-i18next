@@ -1,3 +1,10 @@
+## 1.0.0 (2024-03-15)
+
+
+### Features
+
+* implement basic features ([b78ff4d](https://github.com/kainstar/svelte-i18next/commit/b78ff4de8fe91fed8af470816529836cf4c339f6))
+
 ## [1.1.0](https://github.com/kainstar/typescript-npm-package-template/compare/v1.0.1...v1.1.0) (2024-01-25)
 
 
