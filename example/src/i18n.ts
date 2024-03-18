@@ -1,7 +1,7 @@
+import '../../src';
+
 import i18next from 'i18next';
 import resources from 'virtual:i18next-loader';
-
-import '../../src';
 
 i18next.init({
   debug: true,

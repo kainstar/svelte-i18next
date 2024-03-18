@@ -7,6 +7,7 @@
   import HTML, { type HTMLAstNode } from 'html-parse-stringify';
   import { getContext } from 'svelte';
   import type { Readable } from 'svelte/store';
+
   import type { NormalizedTransComponent, SvelteI18nextOptions } from './type';
 
   export let node: HTMLAstNode;

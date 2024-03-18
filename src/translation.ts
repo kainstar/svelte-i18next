@@ -1,6 +1,7 @@
-import { derived, readonly, type Readable } from 'svelte/store';
-import { getI18nContext, hasI18nContext } from './context';
 import type { Namespace, TFunction } from 'i18next';
+import { derived, type Readable, readonly } from 'svelte/store';
+
+import { getI18nContext, hasI18nContext } from './context';
 
 export function getTranslation(
   ns?: Namespace,

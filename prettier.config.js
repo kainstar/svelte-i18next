@@ -3,6 +3,7 @@ export default {
   printWidth: 120,
   singleQuote: true,
   proseWrap: 'never',
+  plugins: ['prettier-plugin-svelte'],
   overrides: [
     {
       files: '**/*.json',
@@ -16,5 +17,6 @@ export default {
         parser: 'jsonc',
       },
     },
+    { files: '*.svelte', options: { parser: 'svelte' } },
   ],
 };

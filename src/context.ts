@@ -1,6 +1,7 @@
 import type { i18n } from 'i18next';
-import { setContext, getContext, hasContext, onMount, onDestroy } from 'svelte';
-import { writable, type Writable } from 'svelte/store';
+import { getContext, hasContext, onDestroy, onMount, setContext } from 'svelte';
+import { type Writable, writable } from 'svelte/store';
+
 import { DEFAULT_OPTIONS } from './default-options';
 
 const I18nContext = Symbol('i18n');
@@ -23,7 +24,7 @@ export function setI18nContext(i18n: i18n) {
     }
 
     if (bindI18nStore) {
-      // @ts-ignore
+      // @ts-ignore -- i18next typings are wrong
       i18n.store.on(bindI18nStore, resetI18n);
     }
 
@@ -33,7 +34,7 @@ export function setI18nContext(i18n: i18n) {
       }
 
       if (bindI18nStore) {
-        // @ts-ignore
+        // @ts-ignore -- i18next typings are wrong
         i18n.store.off(bindI18nStore, resetI18n);
       }
     };

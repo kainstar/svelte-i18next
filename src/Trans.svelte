@@ -1,12 +1,13 @@
 <script lang="ts">
-  import type { Namespace, TOptions } from 'i18next';
-  import { getTranslation } from './translation';
-  import { setContext } from 'svelte';
   import HTML from 'html-parse-stringify';
-  import { DEFAULT_OPTIONS } from './default-options';
-  import AstRender, { ASTComponents, ASTTags } from './ast-render.svelte';
-  import type { NormalizedTransComponent, TransComponentProp } from './type';
+  import type { Namespace, TOptions } from 'i18next';
+  import { setContext } from 'svelte';
   import { derived, writable } from 'svelte/store';
+
+  import AstRender, { ASTComponents, ASTTags } from './ast-render.svelte';
+  import { DEFAULT_OPTIONS } from './default-options';
+  import { getTranslation } from './translation';
+  import type { NormalizedTransComponent, TransComponentProp } from './type';
 
   export let i18nKey: string;
   export let tOptions: TOptions = {};

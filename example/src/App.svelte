@@ -1,9 +1,10 @@
 <script lang="ts">
   import { getTranslation, setI18nContext, Trans } from '../../src';
-  import i18nInstance from './i18n';
-  import Img from './components/Img.svelte';
+
   import Custom from './components/Custom.svelte';
+  import Img from './components/Img.svelte';
   import Child from './Child.svelte';
+  import i18nInstance from './i18n';
 
   setI18nContext(i18nInstance);
 
