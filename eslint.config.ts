@@ -1,11 +1,9 @@
 import kainstar from '@kainstar/eslint-config';
+import type { Linter } from 'eslint';
 import svelte from 'eslint-plugin-svelte';
 import * as parserSvelte from 'svelte-eslint-parser';
 
-import * as eslintTsParser from './node_modules/@typescript-eslint/parser/dist/parser.js';
-
-export default kainstar(
-  {},
+export default kainstar({}, [
   {
     name: 'svelte',
     files: ['**/*.svelte'],
@@ -13,7 +11,11 @@ export default kainstar(
       parser: parserSvelte,
       parserOptions: {
         extraFileExtensions: ['.svelte'],
-        parser: eslintTsParser,
+        parser: {
+          ts: '@typescript-eslint/parser',
+          js: 'espree',
+          typescript: '@typescript-eslint/parser',
+        },
       },
     },
     plugins: {
@@ -21,11 +23,11 @@ export default kainstar(
     },
     processor: svelte.processors.svelte,
     rules: {
-      'prettier/prettier': 'error',
       'import/no-mutable-exports': 'off',
+      'prettier/prettier': 'error',
       'no-inner-declarations': 'off',
-      ...svelte.configs.prettier.rules,
-      ...svelte.configs.recommended.rules,
+      'no-self-assign': 'off',
+      ...(svelte.configs.recommended.rules as Linter.RulesRecord),
     },
   },
-);
+]);
