@@ -1,15 +1,19 @@
 {
   "name": "@kainstar/svelte-i18next",
   "version": "1.0.0",
-  "description": "A template for creating npm packages using TypeScript and VSCode",
+  "description": "i18next's framework adapter for svelte, better internationalization UX",
   "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
       "svelte": "./dist/index.js"
     }
   },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "files": [
     "dist"
   ],
@@ -36,11 +40,10 @@
     "node": ">=18.0"
   },
   "keywords": [
-    "boilerplate",
-    "template",
-    "typescript",
-    "vscode",
-    "semantic-release"
+    "svelte",
+    "i18n",
+    "i18next",
+    "internationalization"
   ],
   "bugs": {
     "url": "https://github.com/kainstar/svelte-i18next/issues"
