@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/kainstar/svelte-i18next/compare/v1.0.0...v1.0.1) (2024-03-23)
+
+
+### Bug Fixes
+
+* add package.json export root import ([c31f331](https://github.com/kainstar/svelte-i18next/commit/c31f3318de6eaca70c8dcff9dc60159aa402a979))
+
 ## 1.0.0 (2024-03-15)
 
 
