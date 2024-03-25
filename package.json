@@ -72,6 +72,7 @@
     "eslint-plugin-svelte": "^2.35.1",
     "eslint-ts-patch": "8.57.0-0",
     "husky": "^9.0.11",
+    "i18next": "^23.10.1",
     "is-ci": "^3.0.1",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
@@ -93,10 +94,10 @@
     "access": "public"
   },
   "peerDependencies": {
+    "i18next": "^23.10.1",
     "svelte": "^4.2.12"
   },
   "dependencies": {
-    "html-parse-stringify": "^3.0.1",
-    "i18next": "^23.10.1"
+    "html-parse-stringify": "^3.0.1"
   }
 }
