@@ -1,6 +1,6 @@
 {
   "name": "@kainstar/svelte-i18next",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "i18next's framework adapter for svelte, better internationalization UX",
   "sideEffects": false,
   "type": "module",
